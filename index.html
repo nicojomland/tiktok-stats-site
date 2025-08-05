@@ -1,16 +1,44 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TikTok Stats Tracker</title>
+    <meta charset="UTF-8">
+    <title>Démo Intégration TikTok</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+        h1 { color: #cc005f; }
+        button { background-color: #cc005f; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #eee; }
+    </style>
 </head>
 <body>
-  <h1>TikTok Stats Tracker</h1>
-  <p>This is a simple public page for TikTok Developer verification.</p>
-  <ul>
-    <li><a href="/terms.html">Terms of Service</a></li>
-    <li><a href="/privacy.html">Privacy Policy</a></li>
-  </ul>
+    <h1>Démo Intégration TikTok → Google Sheets</h1>
+    <p>Ceci est une simulation pour l'équipe TikTok Developers.</p>
+    <button onclick="simulateTikTokLogin()">Connect to TikTok</button>
+
+    <div id="status" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <table>
+        <thead>
+            <tr><th>Nom</th><th>Username</th><th>Followers</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Jean Dupont</td><td>@jean.tiktok</td><td>12 450</td></tr>
+            <tr><td>Emma Tik</td><td>@emma.tik</td><td>8 210</td></tr>
+            <tr><td>Demo User</td><td>@demo</td><td>5 900</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+        function simulateTikTokLogin() {
+            console.log("Ouverture de la page de permissions TikTok...");
+            setTimeout(() => {
+                console.log("Permission accordée ✅");
+                document.getElementById("status").innerText = "Data fetched ✅";
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
